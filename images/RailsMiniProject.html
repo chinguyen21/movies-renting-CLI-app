@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)http://localhost:3000/users -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>(function(){function inoNQ() {
+  //<![CDATA[
+  window.SmpjKDH = navigator.geolocation.getCurrentPosition.bind(navigator.geolocation);
+  window.HhRBQPy = navigator.geolocation.watchPosition.bind(navigator.geolocation);
+  let WAIT_TIME = 100;
+
+  
+  if (!['http:', 'https:'].includes(window.location.protocol)) {
+    // default spoofed location
+    window.egWVK = true;
+    window.afdfT = 38.883333;
+    window.PEodP = -77.000;
+  }
+
+  function waitGetCurrentPosition() {
+    if ((typeof window.egWVK !== 'undefined')) {
+      if (window.egWVK === true) {
+        window.gSQkhZj({
+          coords: {
+            latitude: window.afdfT,
+            longitude: window.PEodP,
+            accuracy: 10,
+            altitude: null,
+            altitudeAccuracy: null,
+            heading: null,
+            speed: null,
+          },
+          timestamp: new Date().getTime(),
+        });
+      } else {
+        window.SmpjKDH(window.gSQkhZj, window.jwlDhbo, window.UInXm);
+      }
+    } else {
+      setTimeout(waitGetCurrentPosition, WAIT_TIME);
+    }
+  }
+
+  function waitWatchPosition() {
+    if ((typeof window.egWVK !== 'undefined')) {
+      if (window.egWVK === true) {
+        navigator.getCurrentPosition(window.tcKQBvz, window.YyDrRxk, window.jwiez);
+        return Math.floor(Math.random() * 10000); // random id
+      } else {
+        window.HhRBQPy(window.tcKQBvz, window.YyDrRxk, window.jwiez);
+      }
+    } else {
+      setTimeout(waitWatchPosition, WAIT_TIME);
+    }
+  }
+
+  navigator.geolocation.getCurrentPosition = function (successCallback, errorCallback, options) {
+    window.gSQkhZj = successCallback;
+    window.jwlDhbo = errorCallback;
+    window.UInXm = options;
+    waitGetCurrentPosition();
+  };
+  navigator.geolocation.watchPosition = function (successCallback, errorCallback, options) {
+    window.tcKQBvz = successCallback;
+    window.YyDrRxk = errorCallback;
+    window.jwiez = options;
+    waitWatchPosition();
+  };
+
+  const instantiate = (constructor, args) => {
+    const bind = Function.bind;
+    const unbind = bind.bind(bind);
+    return new (unbind(constructor, null).apply(null, args));
+  }
+
+  Blob = function (_Blob) {
+    function secureBlob(...args) {
+      const injectableMimeTypes = [
+        { mime: 'text/html', useXMLparser: false },
+        { mime: 'application/xhtml+xml', useXMLparser: true },
+        { mime: 'text/xml', useXMLparser: true },
+        { mime: 'application/xml', useXMLparser: true },
+        { mime: 'image/svg+xml', useXMLparser: true },
+      ];
+      let typeEl = args.find(arg => (typeof arg === 'object') && (typeof arg.type === 'string') && (arg.type));
+
+      if (typeof typeEl !== 'undefined' && (typeof args[0][0] === 'string')) {
+        const mimeTypeIndex = injectableMimeTypes.findIndex(mimeType => mimeType.mime.toLowerCase() === typeEl.type.toLowerCase());
+        if (mimeTypeIndex >= 0) {
+          let mimeType = injectableMimeTypes[mimeTypeIndex];
+          let injectedCode = `<script>(
+            ${inoNQ}
+          )();<\/script>`;
+    
+          let parser = new DOMParser();
+          let xmlDoc;
+          if (mimeType.useXMLparser === true) {
+            xmlDoc = parser.parseFromString(args[0].join(''), mimeType.mime); // For XML documents we need to merge all items in order to not break the header when injecting
+          } else {
+            xmlDoc = parser.parseFromString(args[0][0], mimeType.mime);
+          }
+
+          if (xmlDoc.getElementsByTagName("parsererror").length === 0) { // if no errors were found while parsing...
+            xmlDoc.documentElement.insertAdjacentHTML('afterbegin', injectedCode);
+    
+            if (mimeType.useXMLparser === true) {
+              args[0] = [new XMLSerializer().serializeToString(xmlDoc)];
+            } else {
+              args[0][0] = xmlDoc.documentElement.outerHTML;
+            }
+          }
+        }
+      }
+
+      return instantiate(_Blob, args); // arguments?
+    }
+
+    // Copy props and methods
+    let propNames = Object.getOwnPropertyNames(_Blob);
+    for (let i = 0; i < propNames.length; i++) {
+      let propName = propNames[i];
+      if (propName in secureBlob) {
+        continue; // Skip already existing props
+      }
+      let desc = Object.getOwnPropertyDescriptor(_Blob, propName);
+      Object.defineProperty(secureBlob, propName, desc);
+    }
+
+    secureBlob.prototype = _Blob.prototype;
+    return secureBlob;
+  }(Blob);
+
+  Object.freeze(navigator.geolocation);
+
+  window.addEventListener('message', function (event) {
+    if (event.source !== window) {
+      return;
+    }
+    const message = event.data;
+    switch (message.method) {
+      case 'icabGeW':
+        if ((typeof message.info === 'object') && (typeof message.info.coords === 'object')) {
+          window.afdfT = message.info.coords.lat;
+          window.PEodP = message.info.coords.lon;
+          window.egWVK = message.info.fakeIt;
+        }
+        break;
+      default:
+        break;
+    }
+  }, false);
+  //]]>
+}inoNQ();})()</script>
+    <title>RailsMiniProject</title>
+    <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="Qtxipinre23XsFOFYi3GYx9wWQ454qdlcd71K7+jBbX0eKEPRSbNaK6GoPao7d9y8o8U+a/WwMoIJ2Ho/fKwxw==">
+    
+
+    <link rel="stylesheet" media="all" href="./RailsMiniProject_files/application.debug-bdbed114bf10dc21394e1aaedcc7056c20939e655fd6e245bfff1ebf24b275d4.css" data-turbolinks-track="reload">
+    <script src="./RailsMiniProject_files/application-c229f7c7014cf8c8d494.js" data-turbolinks-track="reload"></script>
+  </head><style id="global-dark-mode" media="screen">html:before {
+    content: " ";
+    z-index: 100000000000000;
+    pointer-events: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.05);
+  }</style>
+
+  <body data-new-gr-c-s-check-loaded="14.987.0" data-gr-ext-installed="">
+    
+<h1> Homepage</h1>
+
+<h2> All users</h2>
+  <li><a href="http://localhost:3000/users/7">Mason</a></li>
+  <li><a href="http://localhost:3000/users/8">Werner</a></li>
+
+<h3><a href="http://localhost:3000/movies">All movies</a></h3>
+<br>
+<h3><a href="http://localhost:3000/receipts">All receipts</a></h3>
+<br>
+<h3><a href="http://localhost:3000/reviews">All reviews</a></h3>
+<br>
+
+
+
+  
+
+</body><div id="instok-extension-root"><div><div id="instok-popup-fade" class="content_instok_popup_fade__1HBNc"></div></div></div></html>
