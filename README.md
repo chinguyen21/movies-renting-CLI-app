@@ -20,9 +20,13 @@ A small movies renting program made with Ruby and SQLite
 
 ## PREVIEW
 
-* A User can sign up or login(with the right email) to the application 
-* As a user, I want to enter a location and be given a random nearby restaurant suggestion
-* As a user, I should be able to reject a suggestion and not see that restaurant suggestion again
-* As a user, I want to be able to save to and retrieve a list of favorite restaurant suggestions
+![](preview.gif)
 
-Built by Chi Nguyen and Rahel Hagos
+* User can sign up or login (with right email address) to the application.
+* User can edit their name, email address and also delete account.
+* User can see all the movies in the application. User also can search movies by rating, by rate-age, or by name
+* User can rent and return movies.
+* User can keep track their history renting and the movies they haven't return yet.
+* User can leave reviews and ratings for movies and it will update to database. 
+
+### Built by Chi Nguyen and Rahel Hagos

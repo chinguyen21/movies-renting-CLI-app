@@ -27,7 +27,7 @@ class RedBoxApp
  ╚══╝╚══╝ ╚══════╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝       ╚═╝    ╚═════╝ 
                                                                                     "
 
-  sleep(1)
+  sleep(2)
   puts "
             ██████╗ ███████╗██████╗ ██████╗  ██████╗ ██╗  ██╗
             ██╔══██╗██╔════╝██╔══██╗██╔══██╗██╔═══██╗╚██╗██╔╝
@@ -38,7 +38,7 @@ class RedBoxApp
                                                              
       
        "
-  sleep(5) 
+  sleep(2) 
   puts "=" * 50
   main_page
   end 
@@ -92,7 +92,7 @@ class RedBoxApp
           puts "Welcome back, #{@user.name}!".colorize(:green).italic
           puts ""
           sleep(2)
-          account_page   
+        account_page   
         end
                          
      elsif 
