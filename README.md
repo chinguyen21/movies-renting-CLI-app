@@ -20,7 +20,7 @@ A small movies renting program made with Ruby and SQLite
 
 ## PREVIEW
 
-![](preview.gif)
+![](Preview.gif)
 
 * User can sign up or login (with right email address) to the application.
 * User can edit their name, email address and also delete account.
