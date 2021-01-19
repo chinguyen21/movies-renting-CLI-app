@@ -1,6 +1,6 @@
 # Movies Renting CLI Program CRUD Application
 
-A small movies renting program made with Ruby and SQLite
+A movies renting CLI application made with Ruby, Active Record and SQLite
 
 
 ## TOOL
@@ -18,15 +18,17 @@ A small movies renting program made with Ruby and SQLite
 3. Run "Bundle Install"
 4. Run "ruby bin/run.rb
 
+## FEATURES
+
+* Users can sign up or login (with right email address) to the application.
+* Users can edit their names, emails, addresses and can also delete accounts.
+* Users can see all the movies in the application. Users can also search for movies by ratings, by rate-age, or by names
+* Users can rent and return movies.
+* Users can keep track their history of renting and those they haven't returned yet.
+* Users can post reviews and ratings for movies and it will update the database.
+
 ## PREVIEW
 
-![](Preview.gif)
-
-* User can sign up or login (with right email address) to the application.
-* User can edit their name, email address and also delete account.
-* User can see all the movies in the application. User also can search movies by rating, by rate-age, or by name
-* User can rent and return movies.
-* User can keep track their history renting and the movies they haven't return yet.
-* User can leave reviews and ratings for movies and it will update to database. 
+![](preview.gif)
 
 ### Built by Chi Nguyen and Rahel Hagos
