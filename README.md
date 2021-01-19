@@ -16,7 +16,7 @@ A movies renting CLI application made with Ruby, Active Record and SQLite
 1. Clone this repository
 2. Using the terminal navigate to the root directory
 3. Run "Bundle Install"
-4. Run "ruby bin/run.rb
+4. Run "ruby bin/run.rb"
 
 ## FEATURES
 
