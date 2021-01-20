@@ -29,6 +29,6 @@ A movies renting CLI application made with Ruby, Active Record and SQLite
 
 ## PREVIEW
 
-![](preview.gif)
+![](Preview.gif)
 
 ### Built by Chi Nguyen and Rahel Hagos
